@@ -1,0 +1,5 @@
+#!/bin/sh
+
+## Pipewire
+paru -S  pipewire pipewire-pulse gst-plugin-pipewire pavucontrol
+systemctl --user enable pipewire.service pipewire-pulse.service

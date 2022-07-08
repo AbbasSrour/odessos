@@ -1,0 +1,18 @@
+#!/bin/sh
+
+## Spotify
+
+paru -S --needed --mflags --skipinteg spotify spicetify-cli
+cd
+git clone https://github.com/spicetify/spicetify-themes.git ~/.config/spicetify/Themes
+
+sudo chmod a+wr /opt/spotify/
+sudo chmod a+wr /opt/spotify/Apps/ -R
+sudo chmod a+wr /usr/share/spotify/
+sudo chmod a+wr /usr/share/spotify/Apps -R
+cd "$(dirname "$(spicetify -c)")/Themes/Dribbblish"
+mkdir -p ../../Extensions
+cp dribbblish.js ../../Extensions/.
+spicetify config extensions dribbblish.js
+spicetify config current_theme Dribbblish color_scheme nordic
+spicetify config inject_css 1 replace_colors 1 overwrite_assets 1

@@ -1,0 +1,36 @@
+######################################################## StarShip Prompt Config ##################################################
+
+## General Settings
+add_newline = true
+
+## Modules
+
+[character]                            
+ success_symbol = "[➜](bold purple)"    
+ error_symbol = "[✗](bold red) "
+# success_symbol = "[󰶻](bold purple) "    
+#error_symbol = "[󰯈](bold red) "
+vicmd_symbol = "[V](bold blue) "
+
+[package]
+disabled = false
+
+[line_break]
+disabled = true
+
+[cmd_duration]
+format = "took [$duration]($style) "
+style =	"bold yellow"
+
+[username]
+style_user = "bold dimmed blue"
+style_root = "black bold"
+format = "[  ](blue)[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format =  "@[$hostname](bold red) "
+trim_at = ".companyname.com"
+disabled = false

@@ -1,0 +1,28 @@
+#!/bin/sh
+############ A script to launch the polybar and blur the wallpaper
+
+# Run xrandr
+xrandr --output eDP-1 --mode 1366x768 --output HDMI-2 --mode 1440x900 --left-of eDP-1
+
+# Terminate already running bar instances
+killall -q polybar
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
+
+### eDP1
+eww -c $HOME/.config/eww/Bar open-many --toggle panel launcher &
+polybar ewwWorkspaces &
+
+### HDMI-2
+polybar control2 &
+polybar workspace2 &
+polybar status2 &
+polybar date2 &
+polybar power2 &
+
+# Blur the wallpaper
+# sh .local/bin/feh-blur -b 6 --darken 0
+
+while [ -z "$(find /tmp -maxdepth 1 -name "polybar*")" ]; do sleep 1; done
+polybar-msg cmd hide &

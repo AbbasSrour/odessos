@@ -1,0 +1,164 @@
+: 1657216003:0;clear
+: 1657216003:0;clear
+: 1657216003:0;cd
+: 1657216003:0;exec google-chrome
+: 1657216003:0;fish
+: 1657216003:0;exec google-chrome-stable
+: 1657216003:0;fish
+: 1657216003:0;fish
+: 1657216003:0;clear
+: 1657216003:0;fish
+: 1657216003:0;fish
+: 1657216003:0;fish
+: 1657216003:0;exec eww open-many weather_side time_side smol_calendar player_side sys_side sliders_side\
+
+: 1657216003:0;fish
+: 1657216003:0;clear
+: 1657216003:0;fish
+: 1657216003:0;fish
+: 1657216003:0;exec eww open-many weather_side time_side smol_calendar player_side sys_side sliders_side
+: 1657216003:0;clear
+: 1657216003:0;fish
+: 1657216003:0;cd .local/bin/setup/Fish
+: 1657216003:0;cd .local/bin/setup/
+: 1657216003:0;sh Fish
+: 1657216003:0;vim Fish
+: 1657216003:0;paru -S curl
+: 1657216003:0;clear
+: 1657216003:0;sh Fish
+: 1657216003:0;vim Fish
+: 1657216003:0;vim Fish
+: 1657216003:0;sh Fish
+: 1657216003:0;vim Fish
+: 1657216003:0;curl -L https://get.oh-my.fish > install
+: 1657216003:0;fish install --path=~/.local/share/omf --config=~/.config/omf
+: 1657216003:0;fish
+: 1657216003:0;paru -S fish
+: 1657216003:0;fish install --path=~/.local/share/omf --config=~/.config/omf
+: 1657216003:0;fish
+: 1657216003:0;acpi
+: 1657216003:0;clear
+: 1657216003:0;cd .local/share
+: 1657216003:0;ls
+: 1657216003:0;ls -al
+: 1657216003:0;fish
+: 1657216003:0;git clone https://github.com/AbbasSrour/fonts
+: 1657216003:0;clear
+: 1657216003:0;gh auth setup-git
+: 1657216003:0;git clone https://github.com/AbbasSrour/fonts
+: 1657216003:0;ls
+: 1657216003:0;cd fonts
+: 1657216003:0;ls
+: 1657216003:0;clear
+: 1657216003:0;fc-cache -v
+: 1657216003:0;clear
+: 1657216003:0;cd .local
+: 1657216003:0;cd bin/setup
+: 1657216003:0;vim pkglist.txt
+: 1657216003:0;cd
+: 1657216003:0;clear
+: 1657216003:0;ls
+: 1657216003:0;ls -al
+: 1657216003:0;clear
+: 1657216003:0;git clone https://github.com/AbbasSrour/Code
+: 1657216003:0;cd .local
+: 1657216003:0;ls
+: 1657216003:0;mkdir share
+: 1657216003:0;ls
+: 1657216003:0;cd share
+: 1657216003:0;ls
+: 1657216003:0;git clone https://github.com/AbbasSrour/fonts
+: 1657216003:0;gh
+: 1657216003:0;gh auth login
+: 1657216003:0;git clone https://github.com/AbbasSrour/font
+: 1657216003:0;clear
+: 1657216003:0;paru -Syyu phinger-cursors
+: 1657216003:0;clear
+: 1657216003:0;cd .local/bin/setup
+: 1657216003:0;ls
+: 1657216003:0;paru -Syyu --needed < pkglist.txt
+: 1657216003:0;paru -Syyu --needed << pkglist.txt
+: 1657216003:0;paru -Syyu < pkglist.txt
+: 1657216003:0;paru -Syyu < pkglist
+: 1657216003:0;paru -S < pkglist
+: 1657216003:0;paru -S < pkglist.txt
+: 1657216003:0;ls
+: 1657216003:0;vim pkglist.txt
+: 1657216003:0;paru --needed -Syyu < pkglist.txt
+: 1657216003:0;paru -Syyu --needed - < pkglist.txt
+: 1657216003:0;clear
+: 1657216003:0;ls
+: 1657216003:0;sh ChaoticAur
+: 1657216003:0;clear
+: 1657216003:0;paru -Syyu --needed - < pkglist.txt
+: 1657216003:0;paru -Syyu --needed - < pkglist.txt
+: 1657216003:0;clear
+: 1657216003:0;cd .local/bin/setup
+: 1657216003:0;ls
+: 1657216003:0;sh Fish
+: 1657216003:0;clear
+: 1657216003:0;yay -S fish
+: 1657216003:0;clear
+: 1657216003:0;fish
+: 1657216003:0;clear
+: 1657216003:0;fish
+: 1657216003:0;glvim
+: 1657216003:0;cleanup
+: 1657216003:0;fish
+: 1657215989:0;lvim
+: 1657215993:0;glvim
+: 1657215999:0;clear
+: 1657216152:0;yay -S --needed zsh-syntax-highlighting	zsh-autosuggestions
+: 1657216160:0;clear
+: 1657216161:0;zsh
+: 1657216345:0;clear
+: 1657216414:0;zsh
+: 1657216415:0;vi
+: 1657216457:0;cleanup
+: 1657216463:0;clear
+: 1657216472:0;picom
+: 1657216476:0;picom &
+: 1657216502:0;pnpm 
+: 1657216513:0;pnpm -g prettier
+: 1657216522:0;pnpm setup
+: 1657216541:0;pnpm -g prettier
+: 1657216550:0;pnpm setup
+: 1657216559:0;clear
+: 1657216626:0;pnpm -g prettier
+: 1657216637:0;clear
+: 1657216640:0;pnpm setup
+: 1657216644:0;bash
+: 1657217011:0;clear
+: 1657217012:0;zsh
+: 1657217016:0;vim
+: 1657217023:0;clear
+: 1657217043:0;echo XAUTHORITY
+: 1657217052:0;which XAUTHORITY
+: 1657217082:0;printenv
+: 1657217137:0;pnpm -g install prettier
+: 1657217145:0;pnpm setup
+: 1657217148:0;clear
+: 1657217179:0;printenv
+: 1657217186:0;printenv GOPATH
+: 1657217197:0;printenv ZATHURITY
+: 1657217214:0;printenv XAUTHORITY
+: 1657217229:0;zsh
+: 1657217232:0;printenv XAUTHORITY
+nvim .config/shell/zsh
+zsh
+: 1657217296:0;nvim
+: 1657217314:0;clear
+: 1657217322:0;printenv XAUTHORITY
+: 1657217330:0;clear
+: 1657217348:0;yay vim
+: 1657217377:0;nvim
+: 1657217386:0;ls
+: 1657217389:0;ls -al
+: 1657217434:0;vim
+: 1657217436:0;nvim
+: 1657217455:0;nvim .config/shell/zsh/aliasrc
+: 1657217466:0;vi
+: 1657217484:0;nvim
+: 1657217648:0;clear
+: 1657217650:0;fish
+: 1657217683:0;nvim .config/fish
