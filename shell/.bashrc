@@ -66,3 +66,5 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 eval "$(starship init bash)"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
