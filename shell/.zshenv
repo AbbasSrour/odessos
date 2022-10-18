@@ -15,6 +15,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache/"
 export STARSHIP_CONFIG="$HOME/.config/shell/starship/config.toml"
 export STARSHIP_CACHE="$HOME/.config/shell/starship/"
+export WINIT_UNIX_BACKEND=x11
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH

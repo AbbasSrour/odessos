@@ -144,8 +144,8 @@
 : 1657217214:0;printenv XAUTHORITY
 : 1657217229:0;zsh
 : 1657217232:0;printenv XAUTHORITY
-nvim .config/shell/zsh
-zsh
+: 1665095267:0;nvim .config/shell/zsh
+: 1665095267:0;zsh
 : 1657217296:0;nvim
 : 1657217314:0;clear
 : 1657217322:0;printenv XAUTHORITY
@@ -163,3 +163,16 @@ zsh
 : 1657217650:0;fish
 : 1657217683:0;nvim .config/fish
 : 1657415671:0;fish
+: 1665086344:0;clear
+: 1665086346:0;fish
+: 1665091128:0;neovide
+: 1665091136:0;fish
+: 1665092905:0;bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+: 1665093497:0;LV_BRANCH=rolling bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/rolling/utils/installer/install.sh)
+: 1665094386:0;neovide
+: 1665094717:0;yay discord
+: 1665094784:0;clear
+: 1665095159:0;fisg
+: 1665095160:0;fish
+: 1665095230:0;chsh -s $(which fish)
+: 1665095246:0;nvim .config/kitty
