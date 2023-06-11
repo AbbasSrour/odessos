@@ -1,3 +1,5 @@
 shell/.config/shell/starship/*.log
 shell/.config/shell/zsh/.zcompdump-*
 shell/.config/shell/zsh/zsh_history
+shell/.config/shell/session*.log
+pictures/Pictures/Screenshots/*
