@@ -1,8 +1,0 @@
-#!/bin/sh
-
-cd
-git clone --depth 1 https://github.com/vandalsoul/dedsec-grub2-theme.git
-cd dedsec-grub2-theme
-sudo python3 install.py
-cd
-rm -rf dedsec-grub2-theme/

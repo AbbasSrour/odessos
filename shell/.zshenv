@@ -6,7 +6,7 @@
 
 # DEFAULT PROGRAMS:
 export EDITOR="nvim"
-export BROWSER="google-chrome-stable"
+export BROWSER="firefox"
 export TERM="kitty"
 
 # BASIC VARIABLES:
@@ -20,8 +20,10 @@ export WINIT_UNIX_BACKEND=x11
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=”$HOME/.emacs.d/bin:$PATH”
-export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
 export PATH="$PATH:$HOME/.emacs.d/bin"
+export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
+export PATH="$PATH:$HOME/.local/share/go/bin"
+export PATH="$PATH:$HOME/.local/share/JetBrains/Toolbox/scripts"
 
 # CONFIG:
 # export VIMINIT="source $HOME/.config/vim/.vimrc"

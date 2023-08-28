@@ -55,6 +55,7 @@ alias grep='grep --color=auto'
 # Set PATH so it includes user's private bin directories
 PATH="${HOME}/bin:${HOME}/.local/bin:${PATH}"
 
+
 # Set prompt
 PS1="${Yellow}\u@\h${NC}: ${Blue}\w${NC} \\$ "
 
@@ -64,6 +65,10 @@ eval "$(starship init bash)"
 export PNPM_HOME="/home/ares/.local/share/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+#GO
+export PATH="$PATH:$HOME/.local/bin:$GOPATH/bin"
+export PATH="$PATH:$HOME/.local/share/go/bin"
 
 eval "$(starship init bash)"
 export VOLTA_HOME="$HOME/.volta"
