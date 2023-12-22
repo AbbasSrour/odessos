@@ -43,4 +43,5 @@ alias mvn-project='.local/bin/mvn-project'
 
 #General
 alias task='go-task'
+alias rm='rm -i'
 
