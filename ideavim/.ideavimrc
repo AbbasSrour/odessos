@@ -26,11 +26,15 @@ nnoremap <TAB> :action NextTab<CR>
 nnoremap <s-TAB> :action  PreviousTab<CR>
 
 """ Comments
-nnor\map gcc :action CommentByLineComment<CR>
+nnoremap gcc :action CommentByLineComment<CR>
 " map gc :action CommentByBlockComment<CR>
 
 """ Search
 set incsearch
+
+""" LSP
+noremap ga :action ShowIntentionActions<CR>
+
 
 """ Refactorings
 "set ideajoin
