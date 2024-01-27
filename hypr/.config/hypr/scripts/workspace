@@ -20,6 +20,7 @@ if [[ $workspace -eq $passivews ]] && [[ $activemonitor != "$passivemonitor" ]];
   echo $activemonitor $passivemonitor
 else
   hyprctl dispatch moveworkspacetomonitor "$workspace $activemonitor" && hyprctl dispatch workspace "$workspace"
+  echo $activemonitor $workspace
 fi
 
 exit 0

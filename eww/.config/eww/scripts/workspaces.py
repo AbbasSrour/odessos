@@ -4,12 +4,12 @@ import subprocess
 import os
 import socket
 
-icons = ["","","","","","","","","",""]
+icons = ["","","","","","","","","","","","","","","",""]
 
 def update_workspace(active_workspace):
-    icons_index = [0,1,2,3,4] 
+    icons_index = [0,1,2,3,4,5,6,7] 
     
-    icons_index[active_workspace - 1] = icons_index[active_workspace - 1] + 5
+    icons_index[active_workspace - 1] = icons_index[active_workspace - 1] + 8
     prompt = f"(box (label :text \"{icons[icons_index[0]]}  {icons[icons_index[1]]}  {icons[icons_index[2]]}  {icons[icons_index[3]]}  {icons[icons_index[4]]}\" ))"
     
     subprocess.run(f"echo '{prompt}'", 
@@ -29,7 +29,7 @@ while True:
         if "workspace>>" == item[0:11]:
             workspaces_num = item[-1]
             
-            if int(workspaces_num) > 5:
+            if int(workspaces_num) > 8:
                 workspaces_num = 1
                 subprocess.run("hyprctl dispatch workspace 1", shell=True)
 
