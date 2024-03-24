@@ -38,10 +38,8 @@ HISTFILE=~/.config/shell/zsh/zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
-fish
 source $ZSH/oh-my-zsh.sh
 eval "$(starship init zsh)"
-neofetch
 
 # Load zsh-syntax-highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
@@ -68,5 +66,9 @@ ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=013,bold
 ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter-quoted]=fg=009
 ZSH_HIGHLIGHT_STYLES[command-substitution-delimiter-unquoted]=fg=009,bold
 ZSH_HIGHLIGHT_STYLES[assign]=fg=009,bold
+
+# PATH
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
+
+neofetch

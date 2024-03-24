@@ -37,11 +37,6 @@ alias vi="nvim"
 #Emacs
 alias doom='.emacs.d/bin/doom'
 
-#Java Maven
-alias mvn-compile='.local/bin/mvn-compile'
-alias mvn-project='.local/bin/mvn-project'
-
 #General
 alias task='go-task'
 alias rm='rm -i'
-

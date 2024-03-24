@@ -6,7 +6,7 @@
 
 # DEFAULT PROGRAMS:
 export EDITOR="nvim"
-export BROWSER="google-chrome-stable"
+export BROWSER="firefox"
 export TERM="wezterm"
 
 # BASIC VARIABLES:
