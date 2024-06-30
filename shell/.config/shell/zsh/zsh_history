@@ -288,3 +288,107 @@
 : 1710672257:0;ls
 : 1710672260:0;fish
 : 1710672402:0;clear
+: 1711361979:0;exit
+: 1712107164:0;volta install bun
+: 1712107251:0;fish
+: 1712122472:0;bun install
+: 1712122476:0;clear
+: 1712122478:0;fish
+: 1712747922:0;npm install
+: 1712748069:0;clear
+: 1712748254:0;fish
+: 1712748853:0;yarn install
+: 1713247778:0;touch somethingelse.json
+: 1713247784:0;vim somethingelse.json
+: 1713339175:0;git push --force
+: 1713339179:0;clear
+: 1713339522:0;git push --force
+: 1713339525:0;clear
+: 1713351751:0;git push --force
+: 1713351753:0;clear
+: 1713420491:0;git push --force
+: 1713529468:0;git push
+: 1713766071:0;fish
+: 1713792557:0;pip install pyroscope-io
+: 1713792630:0;clear
+: 1713810574:0;fish
+: 1714045179:0;pip install starlette-context>=0.3.6
+: 1714045185:0;fish
+: 1715037365:0;./gradlew quarkusDev
+: 1715150404:0;pip install aioredis
+: 1715150411:0;clear
+: 1715150415:0;pip install hiredis
+: 1715151661:0;pip install redis
+: 1715151664:0;clear
+: 1715164582:0;rm -rf ./mof-env
+: 1715164583:0;clear
+: 1715164590:0;fish
+: 1715164735:0;clear
+: 1715164753:0;./scripts/install.sh
+: 1715164758:0;clear
+: 1715165215:0;rm -rf ./mof-env
+: 1715165234:0;python -m venv mof-env
+: 1715165237:0;clear
+: 1715165251:0;./scripts/install.sh
+: 1715165284:0;clear
+: 1715165369:0;pip install dateutil
+: 1715165437:0;pip install python-dateutil
+: 1715287269:0;rm -rf mof-env
+: 1715287278:0;./scripts/install.sh
+: 1715287296:0;python -m venv mof-env
+: 1715287301:0;./scripts/install.sh
+: 1715287375:0;clear
+: 1715296780:0;rm -rf mof-env
+: 1715296792:0;python -m venv mof-env
+: 1715296797:0;./scripts/install.sh
+: 1715625874:0;fish
+: 1716797066:0;cd Backend/
+: 1716797067:0;clear
+: 1716798065:0;cd ..
+: 1716798078:0;python -m venv "erp-env"
+: 1716798098:0;./erp-env/bin/activate
+: 1716798104:0;source ./erp-env/bin/activate
+: 1716798109:0;clear
+: 1716798146:0;cd Backend/
+: 1716798147:0;clear
+: 1716798152:0;pip install -r requirements.txt
+: 1716798263:0;clear
+: 1716798295:0;ls
+: 1716798307:0;python manage.py make-migration
+: 1716798315:0;python manage.py makemigrations
+: 1716798386:0;psql -U postgres
+: 1716798600:0;python manage.py makemigrations
+: 1716798619:0;python manage.py migrate --database company2
+: 1716798634:0;python manage.py migrate --help
+: 1716798671:0;python manage.py migrate --database company1
+: 1716800804:0;pip install xxhash
+: 1716928739:0;pnpm install
+: 1716928748:0;volta pin node@latest
+: 1717784893:0;fish
+: 1717937516:0;dotnet csharpier .
+: 1717938337:0;dotnet
+: 1717938344:0;dotnet new migration Initial
+: 1717938380:0;dotnet ef
+: 1717938391:0;dotnet ef migrations
+: 1717938407:0;clear
+: 1717938409:0;fish
+: 1717940829:0;dotnet
+: 1717940831:0;dotnet ef
+: 1717940839:0;dotnet ef migrations
+: 1717940841:0;dotnet ef migration
+: 1717940843:0;clear
+: 1717941121:0;fish
+: 1718926687:0;ls
+: 1718926690:0;cd Backend/
+: 1718926692:0;ls
+: 1718926693:0;cd ..
+: 1718926716:0;python -m venv erp-env
+: 1718926731:0;fish
+: 1718926738:0;clear
+: 1718926746:0;./erp-env/bin/activate
+: 1718926753:0;source ./erp-env/bin/activate
+: 1718926755:0;clear
+: 1718926771:0;pip install -r ./Backend/requirements.txt
+: 1718926805:0;clear
+: 1719257388:0;git fetch
+: 1719258061:0;clear

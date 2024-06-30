@@ -1,5 +1,6 @@
 if status is-interactive
-	source "./.config/shell/zsh/aliasrc"
+	source "~/.config/shell/zsh/aliasrc"
+	source "~/.zshenv"
 	neofetch
   	printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
 end
