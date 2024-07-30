@@ -6,17 +6,17 @@ add_newline = true
 ## Modules
 
 [character]                            
- success_symbol = "[➜](bold purple)"    
- error_symbol = "[✗](bold red) "
-# success_symbol = "[󰶻](bold purple) "    
-#error_symbol = "[󰯈](bold red) "
+success_symbol = "[➜](bold purple)"    
+error_symbol = "[✗](bold red) "
 vicmd_symbol = "[V](bold blue) "
+# success_symbol = "[󰶻](bold purple) "    
+# error_symbol = "[󰯈](bold red) "
 
 [package]
 disabled = false
 
 [line_break]
-disabled = true
+disabled = false
 
 [cmd_duration]
 format = "took [$duration]($style) "
