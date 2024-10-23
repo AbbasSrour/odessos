@@ -6,7 +6,7 @@ config.enable_tab_bar = false
 config.enable_wayland = false
 config.font_size = 10
 config.default_prog = {
-  '/usr/bin/zsh',
+  '/usr/bin/fish',
   '-l'
 }
 

@@ -6,10 +6,6 @@ if status is-interactive
 	neofetch
 end
 
-function fish_greeting
- 	fortune -a 
-end
-
 # General 
 set -x ARCHFLAGS "-arch x86_64"
 set -x LANG "en_US.UTF-8"
@@ -53,7 +49,6 @@ if test -d ~/.local/bin
 end
 
 ## Functions
-
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
 function __history_previous_command
   switch (commandline -t)
@@ -80,6 +75,11 @@ if [ "$fish_key_bindings" = fish_vi_key_bindings ];
 else
   bind ! __history_previous_command
   bind '$' __history_previous_command_arguments
+end
+
+# Greeting
+function fish_greeting
+    fortune -a 
 end
 
 # Fish command history
@@ -118,6 +118,9 @@ else
     echo "Zoxide is not installed. Please install zoxide to use it."
 end
 
+# Source Gcloud
+bass source /etc/profile.d/google-cloud-cli.sh
+
 # DEFAULT PROGRAMS:
 set -gx EDITOR "nvim"
 set -gx BROWSER "microsoft-edge-stable"
@@ -133,9 +136,10 @@ set -gx STARSHIP_CONFIG "$HOME/.config/shell/starship/config.toml"
 set -gx STARSHIP_CACHE "$HOME/.config/shell/starship/"
 set -gx WEZTERM_CONFIG_FILE "$XDG_CONFIG_HOME/wezterm/wezterm.lua"
 set -gx VOLTA_HOME "$HOME/.volta"
-# set -gx VIMINIT "source $HOME/.config/vim/.vimrc"
-set -gx GOPATH "$XDG_DATA_HOME/go"
+#set -gx VIMINIT "source $HOME/.config/vim/.vimrc"
+set -gx GOPATH "$HOME/.local/share/go"
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
+set -gx ANDROID_HOME "$HOME/Android/sdk"
 
 # CACHE:
 set -gx UMPV_SOCKET "$HOME/.cache/umpv/"
@@ -148,15 +152,13 @@ set -gx PATH "$HOME/.emacs.d/bin" $PATH
 set -gx PATH "$HOME/.local/bin:$GOPATH/bin" $PATH
 set -gx PATH "$HOME/.local/share/go/bin" $PATH
 set -gx PATH "$HOME/.local/share/JetBrains/Toolbox/scripts" $PATH
+set -gx PATH "$HOME/.dotnet/tools" $PATH
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 set -gx PATH "$PNPM_HOME" $PATH
 
-# Warp Terminal
-printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
-
 ## Useful aliases
 # Replace ls with eza
-if test -q eza
+if command -q eza
 	alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
 	alias la='eza -a --color=always --group-directories-first --icons'  # all files and dirs
 	alias ll='eza -l --color=always --group-directories-first --icons'  # long format
@@ -383,3 +385,7 @@ ex=󱁻:\
 *.otf=󰙩 :\
 *.torrent=󰅢 :\
 "
+
+# Warp Terminal
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
+
