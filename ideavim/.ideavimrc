@@ -7,8 +7,7 @@ let mapleader=" "
 
 """ Clipboard
 set clipboard^=unnamedplus
-"""set clipboard+=ideaput
-set clipboard+=unnamed
+set clipboard+=unnamed """ ideaput
 
 """ Configuration
 nnoremap \e :e ~/.ideavimrc<CR>
@@ -36,6 +35,30 @@ set incsearch
 """ LSP
 noremap ga :action ShowIntentionActions<CR>
 
+""" Multiline
+Plug 'terryma/vim-multiple-cursors'
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
+" map gc :action CommentByBlockComment<CR>
+
+""" Editor Managment 
+nnoremap <Leader>q :action CloseContent<CR>
+
+""" Search
+set incsearch
+
+""" LSP
+noremap ga :action ShowIntentionActions<CR>
+
+""" Multiline
+Plug 'terryma/vim-multiple-cursors'
+let g:multi_cursor_use_default_mapping=0
+map mc <A-n>
+map mx <A-x>
+map mp <A-p>
+
+"nnoremap <Leader>q :acti
 
 """ Refactorings
 "set ideajoin

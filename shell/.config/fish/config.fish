@@ -36,7 +36,7 @@ end
 
 ## Environment setup
 
-#Fish Profile
+# Fish Profile
 if test -f ~/.fish_profile
   source ~/.fish_profile
 end
@@ -47,6 +47,7 @@ if test -d ~/.local/bin
         set -p PATH ~/.local/bin
     end
 end
+
 
 ## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
@@ -104,6 +105,11 @@ function copy
     end
 end
 
+# nohup
+function run --argument process
+  nohup $process >> /tmp/nohup.log 2>&1
+end
+
 # Source starship prompt
 if type -q starship
     starship init fish | source
@@ -111,20 +117,33 @@ else
     echo "Starship is not installed. Please install starship to use it."
 end
 
+
+# Warp Terminal
+printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
+
 # Source zoxide
 if type -q zoxide
     zoxide init fish | source
+    alias cd='z'
 else
     echo "Zoxide is not installed. Please install zoxide to use it."
 end
+
+# Setup pyenv
+#if type -q pyenv
+#    pyenv init - | source
+#else
+#    echo "Pyenv is not installed. Please install pyenv to use it."
+#end
+
 
 # Source Gcloud
 bass source /etc/profile.d/google-cloud-cli.sh
 
 # DEFAULT PROGRAMS:
 set -gx EDITOR "nvim"
-set -gx BROWSER "microsoft-edge-stable"
-set -gx TERM "wezterm"
+set -gx BROWSER "zen-browser"
+#set -gx TERM "linux" ## this is causing an issue
 
 # BASIC VARIABLES:
 set -gx XDG_DATA_HOME "$HOME/.local/share"
@@ -140,6 +159,7 @@ set -gx VOLTA_HOME "$HOME/.volta"
 set -gx GOPATH "$HOME/.local/share/go"
 set -gx PNPM_HOME "$HOME/.local/share/pnpm"
 set -gx ANDROID_HOME "$HOME/Android/sdk"
+set -gx OLLAMA_MODELS "$HOME/.ollama/models"
 
 # CACHE:
 set -gx UMPV_SOCKET "$HOME/.cache/umpv/"
@@ -155,6 +175,28 @@ set -gx PATH "$HOME/.local/share/JetBrains/Toolbox/scripts" $PATH
 set -gx PATH "$HOME/.dotnet/tools" $PATH
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 set -gx PATH "$PNPM_HOME" $PATH
+
+# CUDA configuration
+set -gx CUDA_PATH "/opt/cuda"
+
+# Add CUDA paths to PATH
+# If append_path doesn't exist yet, define it first:
+function append_path
+    set dir $argv[1]
+    if test -d $dir
+        if not contains -- $dir $PATH
+            set -gx PATH $PATH $dir
+        end
+    end
+end
+
+# Add CUDA paths
+append_path "/opt/cuda/bin"
+append_path "/opt/cuda/nsight_compute"
+append_path "/opt/cuda/nsight_systems/bin"
+
+# Set the default host compiler for nvcc
+set -gx NVCC_CCBIN "/usr/bin/g++-13"
 
 ## Useful aliases
 # Replace ls with eza
@@ -203,189 +245,8 @@ alias doom='.emacs.d/bin/doom'
 alias task='go-task'
 alias rm='rm -i'
 
-# LF ICONS:
-set -gx LF_ICONS "\
-tw=󰪺 :\
-st=󰉋 :\
-ow=󱁿 :\
-dt=󰉋 :\
-di=󰉋 :\
-fi=󰈔 :\
-ln=󰪹 :\
-or=󱀱 :\
-ex=󱁻:\
-*.c=󰙱 :\
-*.cc=:\
-*.clj=:\
-*.coffee=:\
-*.cpp=󰙲 :\
-*.css=󰌛 :\
-*.d=:\
-*.dart=:\
-*.erl=:\
-*.exs=:\
-*.fs=:\
-*.go=󰟓 :\
-*.h=󰙲 :\
-*.hh=󰙲 :\
-*.hpp=:\
-*.hs=:\
-*.html= :\
-*.java= :\
-*.jl=:\
-*.js= :\
-*.json= :\
-*.lua=󰢱 :\
-*.md=󰗚 :\
-*.php=󰌟 :\
-*.pl=:\
-*.pro=:\
-*.py= :\
-*.rb=󰴭 :\
-*.rs=:\
-*.scala=:\
-*.ts=󰛦 :\
-*.vim=:\
-*.cmd=󱁼 :\
-*.ps1=󱁼 :\
-*.sh=󱁼 :\
-*.bash=󱁼 :\
-*.zsh=󱁼 :\
-*.fish=󱁼 :\
-*.tar=󰏗 :\
-*.tgz=󰏗 :\
-*.arc=:\
-*.arj=:\
-*.taz=󰏗 :\
-*.lha=:\
-*.lz4=:\
-*.lzh=:\
-*.lzma=󰏗 :\
-*.tlz=:\
-*.txz=:\
-*.tzo=:\
-*.t7z=:\
-*.zip=󰿺 :\
-*.z=󰏗 :\
-*.dz=:\
-*.gz=󰏗 :\
-*.lrz=:\
-*.lz=:\
-*.lzo=:\
-*.xz=󰏗 :\
-*.zst=:\
-*.tzst=:\
-*.bz2=󰏓 :\
-*.bz=󰏓 :\
-*.tbz=:\
-*.tbz2=:\
-*.tz=:\
-*.deb=󰣚 :\
-*.rpm=:\
-*.jar=󰬷 :\
-*.war=:\
-*.ear=:\
-*.sar=:\
-*.rar=󱉟 :\
-*.alz=:\
-*.ace=:\
-*.zoo=:\
-*.cpio=:\
-*.7z=󰗄 :\
-*.rz=:\
-*.cab=:\
-*.wim=:\
-*.swm=:\
-*.dwm=:\
-*.esd=:\
-*.jpg=󰋩 :\
-*.jpeg=󰋩 :\
-*.mjpg=󰋩 :\
-*.mjpeg=󰋩 :\
-*.gif=󰵸 :\
-*.bmp=:\
-*.pbm=:\
-*.pgm=:\
-*.ppm=:\
-*.tga=:\
-*.xbm=:\
-*.xpm=:\
-*.tif=:\
-*.tiff=:\
-*.png=󰋩 :\
-*.svg=:\
-*.svgz=:\
-*.mng=:\
-*.pcx=:\
-*.mov=:\
-*.mpg=:\
-*.mpeg=:\
-*.m2v=:\
-*.mkv=󰿎 :\
-*.webm=󰎁 :\
-*.ogm=:\
-*.mp4=󰿎 :\
-*.m4v=:\
-*.mp4v=:\
-*.vob=:\
-*.qt=:\
-*.nuv=:\
-*.wmv=󰎁 :\
-*.asf=:\
-*.rm=:\
-*.rmvb=:\
-*.flc=󰎁 :\
-*.avi=󰎁 :\
-*.fli=:\
-*.flv=:\
-*.gl=:\
-*.dl=:\
-*.xcf=:\
-*.xwd=:\
-*.yuv=:\
-*.cgm=:\
-*.emf=:\
-*.ogv=:\
-*.ogx=:\
-*.aac=:\
-*.au=:\
-*.flac=󰎆 :\
-*.m4a=󰎆 :\
-*.mid=:\
-*.midi=:\
-*.mka=:\
-*.mp3=󰎆 :\
-*.mpc=:\
-*.ogg=:\
-*.ra=:\
-*.wav=󰎁 :\
-*.oga=:\
-*.opus=:\
-*.spx=:\
-*.xspf=:\
-*.pdf=󰈥 :\
-*.nix=:\
-*.iso=󰨆 :\
-*.gba=󱎓 :\
-*.xcf=󱇣 :\
-*.docx=󰈬 :\
-*.dotx=󰈬 :\
-*.txt=󰈙 :\
-*.srt=󰨖 :\
-*.gitignore=󰊢 :\
-*.zshrc=󰒔 :\
-*.download=󰇚 :\
-*.part=󰇚 :\
-*.yml=󰒔 :\
-*.tex=󰈛 :\
-*.tp=󱉬 :\
-*.doc=󱁯 :\
-*.todo=󰝖 :\
-*.ttf=󰙩 :\
-*.otf=󰙩 :\
-*.torrent=󰅢 :\
-"
 
-# Warp Terminal
-printf '\eP$f{"hook": "SourcedRcFileForWarp", "value": { "shell": "fish"}}\x9c'
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /home/ares/.lmstudio/bin
+# End of LM Studio CLI section
 
